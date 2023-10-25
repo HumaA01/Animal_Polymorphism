@@ -1,5 +1,7 @@
-package com.qa;
+package com.qa.something;
 
+
+import com.qa.Interface.Petable;
 
 import java.util.ArrayList;
 

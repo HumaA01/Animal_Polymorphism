@@ -1,4 +1,4 @@
-package com.qa;
+package com.qa.something;
 
 public class Bird extends Animal {
 

@@ -1,6 +1,6 @@
-package com.qa;
+package com.qa.something;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
 
     private String family;
 

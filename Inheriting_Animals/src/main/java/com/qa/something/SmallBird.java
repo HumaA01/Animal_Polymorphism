@@ -1,4 +1,6 @@
-package com.qa;
+package com.qa.something;
+
+import com.qa.Interface.Petable;
 
 public class SmallBird extends Bird implements Petable
 {

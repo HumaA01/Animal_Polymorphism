@@ -1,6 +1,7 @@
-package com.qa;
+package com.qa.something;
 
-import org.w3c.dom.ls.LSOutput;
+
+import com.qa.Interface.Petable;
 
 public class DomesticCat extends Cat implements Petable {
 
