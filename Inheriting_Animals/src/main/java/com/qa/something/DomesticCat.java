@@ -37,13 +37,12 @@ public class DomesticCat extends Cat implements Petable {
         return this.getName() + " come here!";
     }
 
-    @Override
-    public String giveTreat() {
-        return this.getName() + " here's a treat!";
-    }
 
     @Override
     public String admirePet() {
         return Petable.super.admirePet();
     }
+
+
+
 }

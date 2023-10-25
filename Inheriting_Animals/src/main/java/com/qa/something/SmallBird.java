@@ -54,10 +54,7 @@ public class SmallBird extends Bird implements Petable
         return this.getName() + "fly here!";
     }
 
-    @Override
-    public String giveTreat() {
-        return this.getName() + "here is your treat!";
-    }
+
 
     @Override
     public String admirePet() {

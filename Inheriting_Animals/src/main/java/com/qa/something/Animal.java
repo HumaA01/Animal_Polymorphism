@@ -1,5 +1,7 @@
 package com.qa.something;
 
+import com.qa.exceptions.InvalidActionException;
+
 public abstract class Animal {
 
     private String colour;
@@ -27,6 +29,8 @@ public abstract class Animal {
                 getColour(), getGender(), getAge(), getNoOfLegs() );
         return output;
     }
+
+
 
     public abstract String animalNoise();
 

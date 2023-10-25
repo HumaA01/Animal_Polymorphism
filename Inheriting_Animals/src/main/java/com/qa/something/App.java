@@ -2,13 +2,13 @@ package com.qa.something;
 
 
 import com.qa.Interface.Petable;
+import com.qa.exceptions.InvalidActionException;
 
 import java.util.ArrayList;
 
 public class App
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) throws InvalidActionException {
         Cat cat1 = new Cat();
         cat1.setGender(Gender.Female);
         cat1.setAge(2);
@@ -46,13 +46,36 @@ public class App
         ArrayList<Petable> pets = new ArrayList<>();
         pets.add(catDom); pets.add(smallBird); pets.add(smallBird2);
 
-        for(Petable p: pets)
-        {
-            System.out.println(p.admirePet());
-            System.out.println(p.callPet());
-            System.out.println(p.giveTreat());
-        }
+//        for(Petable p: pets)
+//        {
+//            System.out.println(p.admirePet());
+//            System.out.println(p.callPet());
+//        }
 
+//        System.out.println(cat1.giveTreat());
+//        System.out.println(cat1.giveTreat());
+
+
+        System.out.println(catDom.giveTreat("Cheese"));
+
+        ArrayList<Cat> cats = new ArrayList<>();
+        cats.add(cat1); cats.add(catDom); cats.add(cat2);
+
+        try{
+
+            for(Cat c : cats)
+            {
+                System.out.println(c.giveTreat("Chocolate"));
+            }
+        }
+        catch (InvalidActionException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
+        finally {
+            //Continue the for loop for elements that haven't had a treat
+            System.out.println("All treats have been given. Lets continue with the day.");
+        }
 
 
 
